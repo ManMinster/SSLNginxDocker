@@ -29,11 +29,9 @@ Add sslcerts/ssl-bundle.crt  /etc/ssl/certs/ssl-bundle.crt
 ADD sslcerts/myserver.key /etc/ssl/private/myserver.key
 
 
-# Stop deamon service during the configuration process
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-
 # Expose HTTP and SSL ports
 EXPOSE 80 443
 
 # Start the nginx server after container creation
 CMD service nginx start
+
