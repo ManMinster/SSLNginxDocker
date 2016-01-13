@@ -21,6 +21,14 @@ RUN rm -v /etc/nginx/nginx.conf
 # Copy a configuration file from the current directory into the /etc/nginx/ directory of the container
 ADD nginx.conf /etc/nginx/
 
+# Add SSl certificate and private key into directory
+# ssl_certificate =>  /etc/ssl/certs/ssl-bundle.crt;
+# ssl key         =>  /etc/ssl/private/myserver.key;
+
+Add sslcerts/ssl-bundle.crt  /etc/ssl/certs/ssl-bundle.crt
+ADD sslcerts/myserver.key /etc/ssl/private/myserver.key
+
+
 # Stop deamon service during the configuration process
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
