@@ -21,7 +21,7 @@ SSH into your server as super user
 
 [Install docker.io](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker) for the EC2 Ubuntu instance
 
-docker pull manminster/meteornginxdocker
-docker run -d manminster/meteornginxdocker tail -f /dev/null
-docker ps      (copy the ID)
+docker pulr manminster/meteornginxdocke <br />
+docker run -d manminster/meteornginxdocker tail -f /dev/null <br />
+docker ps      (copy the ID) <br />
 docker attach <ID> 
