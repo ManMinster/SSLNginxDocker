@@ -1,4 +1,4 @@
-### meteorNginxDocker
+### SSLNginxDocker
 
 container to download and configure nginx. It upgrades http connections to websockets.
 
