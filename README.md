@@ -12,4 +12,16 @@ These two file must be stored within the `sslcerts` folder. It already contains 
 
 #### nginx.conf
 Replace `mydomain` with your domain. There are two places to do so.
-This configuration asserts that your meteor app is called `myapp`. 
+This eonfiguration asserts that your meteor app is called `myapp`.
+
+
+#### Installation
+
+SSH into your server as super user
+
+[Install docker.io](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker) for the EC2 Ubuntu instance
+
+docker pull manminster/meteornginxdocker
+docker run -d manminster/meteornginxdocker tail -f /dev/null
+docker ps      (copy the ID)
+docker attach <ID> 
